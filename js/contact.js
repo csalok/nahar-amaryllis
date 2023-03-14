@@ -49,7 +49,7 @@ $(document).ready(function() {
         var settings = {
             async: true,
             crossDomain: true,
-            url: "https://lmsapi.persquarefeet.in/submit_lead/20f0024bed8445b9aa3258e868909e83/af6bcdbc74bb4b4c831c8e249f35043b",
+            url: "https://lmsapi.persquarefeet.in/submit_lead/ff6c5310edd447d7bc56730b2fd9cd88/78b79221d67d4ae0a9682a2d630806df",
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -151,7 +151,7 @@ $(document).ready(function() {
         var settings = {
             async: true,
             crossDomain: true,
-            url: "https://lmsapi.persquarefeet.in/submit_lead/20f0024bed8445b9aa3258e868909e83/af6bcdbc74bb4b4c831c8e249f35043b",
+            url: "https://lmsapi.persquarefeet.in/submit_lead/ff6c5310edd447d7bc56730b2fd9cd88/78b79221d67d4ae0a9682a2d630806df",
             // url: "https://tesingwebhook.free.beeceptor.com",
             method: "POST",
             headers: {
@@ -235,7 +235,7 @@ $(document).ready(function() {
         var settings = {
             async: true,
             crossDomain: true,
-            url: "https://lmsapi.persquarefeet.in/submit_lead/20f0024bed8445b9aa3258e868909e83/af6bcdbc74bb4b4c831c8e249f35043b",
+            url: "https://lmsapi.persquarefeet.in/submit_lead/ff6c5310edd447d7bc56730b2fd9cd88/78b79221d67d4ae0a9682a2d630806df",
             method: "POST",
             headers: {
                 "content-type": "application/json"
