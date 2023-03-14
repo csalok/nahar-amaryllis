@@ -3,7 +3,7 @@ $(document).ready(function() {
         $('#recorderror_side').hide();
         $('#recorderror_side').html('');
         var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
-        var filter = /[0-9]{8}/;
+        var filter = /[0-9]{10}/;
         var leadName = $('#side_name').val();
         var leadPhone = $('#side_phone').val();
         var leadEmail = $('#side_email').val();
@@ -26,19 +26,19 @@ $(document).ready(function() {
             $('#sideerror_email').show(0).delay(5000).hide(0);
             return false;
         }
+        
         $('#contactus_side').hide();
         $('.sidebuttonload').show();
-        var leadPhone = itiSide.getNumber()
         var formData = {
             name: leadName,
-            phone: leadPhone,
+            phone: '+91'+leadPhone,
             email: leadEmail,
             utm_source: utmSource,
             utm_medium: utmMedium,
             utm_campaign: utmCampaign,
             utm_term: utmTerm,
             utm_content: utmContent,
-            source: "Website",
+            source: "website",
             extra: {
                 message: leadMsg,
                 referrer: referrer,
@@ -86,7 +86,7 @@ $(document).ready(function() {
         $('#recorderror_footer').hide();
         $('#recorderror_footer').html('');
         var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
-        var filter = /[0-9]{8}/;
+        var filter = /[0-9]{10}/;
         var leadName = $('#footer_name').val();
         var leadPhone = $('#footer_phone').val();
         var leadEmail = $('#footer_email').val();
@@ -129,19 +129,19 @@ $(document).ready(function() {
             });
             return false
         }
+        
         $('#contactus_footer').hide();
         $('.ftbuttonload').show();
-        var leadPhone = itiFooter.getNumber()
         formData = {
             name: leadName,
-            phone: leadPhone,
+            phone: '+91'+leadPhone,
             email: leadEmail,
             utm_source: utmSource,
             utm_medium: utmMedium,
             utm_campaign: utmCampaign,
             utm_term: utmTerm,
             utm_content: utmContent,
-            source: "Website",
+            source: "website",
             extra: {
                 referrer: referrer,
                 userAgent: userAgent,
@@ -189,8 +189,7 @@ $(document).ready(function() {
         $('#recorderror_modal').hide();
         $('#recorderror_modal').html('');
         var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
-        var filter = /[0-9]{9}/;
-        var filterIN = /[0-9]{12}/;
+        var filter = /[0-9]{10}/;
         var leadName = $('#modal_name').val();
         var leadPhone = $('#modal_phone').val();
         var leadEmail = $('#modal_email').val();
@@ -203,36 +202,29 @@ $(document).ready(function() {
         var referrer = document.referrer;
         var userAgent = navigator.userAgent;
         var webUrl = document.baseURI;
-        var leadPhone = itiModal.getNumber()
-        var countryCode = leadPhone.slice(1,3)
         if (leadName == "") {
             $('#modalerror_name').show(0).delay(5000).hide(0);
             return false;
-        } else if (leadPhone == "" || countryCode == 91 && !filterIN.test(leadPhone)) {
-            $('#modalerror_mobile').show(0).delay(5000).hide(0);
-            alert("filterIN")
-            return false;
         } else if (leadPhone == "" || !filter.test(leadPhone)) {
             $('#modalerror_mobile').show(0).delay(5000).hide(0);
-            alert("filter")
             return false;
-        }else if (leadEmail != '' && !pattern.test(leadEmail)) {
+        } else if (leadEmail != '' && !pattern.test(leadEmail)) {
             $('#modalerror_email').show(0).delay(5000).hide(0);
             return false;
         }
+        
         $('#contactus_modal').hide();
         $('.modalbuttonload').show();
-        
         var formData = {
             name: leadName,
-            phone: leadPhone,
+            phone: '91'+leadPhone,
             email: leadEmail,
             utm_source: utmSource,
             utm_medium: utmMedium,
             utm_campaign: utmCampaign,
             utm_term: utmTerm,
             utm_content: utmContent,
-            source: "Website",
+            source: "website",
             extra: {
                 message: leadMsg,
                 referrer: referrer,
@@ -243,7 +235,7 @@ $(document).ready(function() {
         var settings = {
             async: true,
             crossDomain: true,
-            url: "https://testingwebhook.free.beeceptor.com",
+            url: "https://lmsapi.persquarefeet.in/submit_lead/20f0024bed8445b9aa3258e868909e83/af6bcdbc74bb4b4c831c8e249f35043b",
             method: "POST",
             headers: {
                 "content-type": "application/json"
